@@ -22,9 +22,9 @@ def logic(turn_data)
     elsif card1_num == 'Q'
       return 'raise', (turn_data['stack'].to_i * 0.2).to_i.to_s
     elsif card1_num == 'K'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_i.to_s
-    elsif card1_num == 'A'
       return 'raise', (turn_data['stack'].to_i * 0.5).to_i.to_s
+    elsif card1_num == 'A'
+      return 'raise', (turn_data['stack'].to_i * 0.7).to_i.to_s
     else
       return 'fold', nil
     end

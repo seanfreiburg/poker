@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a57d6294-9134-4582-9530-a127630a3d43" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poker_bot.rb" afterPath="$PROJECT_DIR$/poker_bot.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_outputs.rb" afterPath="$PROJECT_DIR$/test_outputs.rb" />
     </list>
     <ignored path="poker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +32,7 @@
       <file leaf-file-name="poker_bot.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/poker_bot.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="5" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.607978">
+            <state line="26" column="52" selection-start="780" selection-end="780" vertical-scroll-proportion="0.53645116">
               <folding />
             </state>
           </provider>
@@ -364,7 +363,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/poker_bot.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="5" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.607978">
+        <state line="26" column="52" selection-start="780" selection-end="780" vertical-scroll-proportion="0.53645116">
           <folding />
         </state>
       </provider>
