@@ -3,14 +3,13 @@ require 'json'
 require 'open-uri'
 
 
-
 CODE_EM_URI = 'nolimitcodeem.com'
 
 def logic(turn_data)
   card1, card2 = get_hand(turn_data)
   card1_num = card1.split('')[0]
   card2_num = card2.split('')[0]
-  if turn_data['current_bet'].to_f > turn_data['stack'].to_i * 0.5
+  if turn_data['current_bet'].to_f > (turn_data['stack'].to_i * 0.5 )
     return 'fold', nil
   elsif card1_num == card2_num
     if card1_num == '8'
@@ -26,21 +25,16 @@ def logic(turn_data)
     elsif card1_num == 'K'
       return 'raise', (turn_data['stack'].to_i * 0.4).to_i.to_s
     elsif card1_num == 'A'
-      return 'raise', (turn_data['stack'].to_i * 0.5).to_i.to_s
+      return 'raise', (turn_data['stack'].to_i * 0.9).to_i.to_s
     else
-      if card1_num == 'A' ||card2_num == 'A'
-        return 'call', nil
-      elsif card1_num == 'K' ||card2_num == 'K'
-        return 'call', nil
-      else
-        return 'fold', nil
-      end
+      return 'fold', nil
     end
   else
-
     if card1_num == 'A' ||card2_num == 'A'
       return 'call', nil
-    elsif card1_num == 'K' ||card2_num == 'K'
+    elsif (card1_num == 'K' && card2_num > '7') || (card2_num == 'K' && card1_num > '7')
+      return 'call', nil
+    elsif (card1_num == 'Q' && card2_num == 'J') || (card1_num == 'J' && card2_num == 'Q')
       return 'call', nil
     else
       return 'fold', nil
@@ -50,13 +44,13 @@ end
 
 
 def get_hand(turn_data)
-  card1, card2 =  turn_data['hand']
+  card1, card2 = turn_data['hand']
 
 end
 
 def get_deal_action(turn_data)
 
- return logic(turn_data)
+  return logic(turn_data)
 
 end
 
@@ -77,7 +71,6 @@ def get_river_action(turn_data)
 end
 
 
-
 def get_action(turn_data)
   if turn_data['community_cards'].empty?
     get_deal_action(turn_data)
@@ -91,12 +84,12 @@ def get_action(turn_data)
 end
 
 def get_game_state(key)
-  response = Net::HTTP.get(CODE_EM_URI,  key)
+  response = Net::HTTP.get(CODE_EM_URI, key)
   JSON.parse(response)
 end
 
-def send_action(key, action,amount)
-  uri = URI('http://' + CODE_EM_URI + key + '/action' )
+def send_action(key, action, amount)
+  uri = URI('http://' + CODE_EM_URI + key + '/action')
 
   if amount
     res = Net::HTTP.post_form(uri, action_name: action, amount: amount)
@@ -115,8 +108,8 @@ def main(key)
     turn_data = get_game_state(key)
     puts turn_data
     if turn_data['your_turn']
-      action,amount = get_action(turn_data)
-      send_action(key,action,amount)
+      action, amount = get_action(turn_data)
+      send_action(key, action, amount)
     end
     sleep 1
   }
