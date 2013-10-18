@@ -6,133 +6,74 @@ require 'open-uri'
 
 CODE_EM_URI = 'nolimitcodeem.com'
 
+def logic(turn_data)
+  card1, card2 = get_hand(turn_data)
+  card1_num = card1.split('')[0]
+  card2_num = card2.split('')[0]
+  if turn_data['current_bet'].to_f > turn_data['stack'].to_i * 0.5
+    return 'fold', nil
+  elsif card1_num == card2_num
+    if card1_num == '8'
+      return 'call', nil
+    elsif card1_num == '9'
+      return 'call', nil
+    elsif card1_num == 'T'
+      return 'call', nil
+    elsif card1_num == 'J'
+      return 'call', nil
+    elsif card1_num == 'Q'
+      return 'raise', (turn_data['stack'].to_i * 0.3).to_i.to_s
+    elsif card1_num == 'K'
+      return 'raise', (turn_data['stack'].to_i * 0.4).to_i.to_s
+    elsif card1_num == 'A'
+      return 'raise', (turn_data['stack'].to_i * 0.5).to_i.to_s
+    else
+      if card1_num == 'A' ||card2_num == 'A'
+        return 'call', nil
+      elsif card1_num == 'K' ||card2_num == 'K'
+        return 'call', nil
+      else
+        return 'fold', nil
+      end
+    end
+  else
+
+    if card1_num == 'A' ||card2_num == 'A'
+      return 'call', nil
+    elsif card1_num == 'K' ||card2_num == 'K'
+      return 'call', nil
+    else
+      return 'fold', nil
+    end
+  end
+end
+
+
 def get_hand(turn_data)
   card1, card2 =  turn_data['hand']
 
 end
 
 def get_deal_action(turn_data)
-  card1, card2 = get_hand(turn_data)
-  card1_num = card1.split('')[0]
-  card2_num = card2.split('')[0]
 
-  if turn_data['current_bet'].to_f > turn_data['stack'].to_i * 0.5
-    return 'fold', nil
-  elsif card1_num == card2_num
-    if card1_num == '8'
-      return 'call', nil
-    elsif card1_num == '9'
-      return 'call', nil
-    elsif card1_num == 'T'
-      return 'call', nil
-    elsif card1_num == 'J'
-      return 'call', nil
-    elsif card1_num == 'Q'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
-    elsif card1_num == 'K'
-      return 'raise', (turn_data['stack'].to_i).to_s
-    elsif card1_num == 'A'
-      return 'raise', (turn_data['stack'].to_i).to_s
-    else
-      return 'fold', nil
-    end
-  else
-    return 'fold', nil
-  end
+ return logic(turn_data)
+
 end
 
 def get_flop_action(turn_data)
   community_cards = turn_data['community_cards']
 
-  card1, card2 = get_hand(turn_data)
-  card1_num = card1.split('')[0]
-  card2_num = card2.split('')[0]
-
-  if turn_data['current_bet'].to_f > turn_data['stack'].to_i * 0.5
-    return 'fold', nil
-  elsif card1_num == card2_num
-    if card1_num == '8'
-      return 'call', nil
-    elsif card1_num == '9'
-      return 'call', nil
-    elsif card1_num == 'T'
-      return 'call', nil
-    elsif card1_num == 'J'
-      return 'call', nil
-    elsif card1_num == 'Q'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
-    elsif card1_num == 'K'
-      return 'raise', (turn_data['stack'].to_i).to_s
-    elsif card1_num == 'A'
-      return 'raise', (turn_data['stack'].to_i).to_s
-    else
-      return 'fold', nil
-    end
-  else
-    return 'fold', nil
-  end
+  return logic(turn_data)
 end
 
 def get_turn_action(turn_data)
   community_cards = turn_data['community_cards']
-  card1, card2 = get_hand(turn_data)
-  card1_num = card1.split('')[0]
-  card2_num = card2.split('')[0]
-
-  if turn_data['current_bet'].to_f > turn_data['stack'].to_i * 0.5
-    return 'fold', nil
-  elsif card1_num == card2_num
-    if card1_num == '8'
-      return 'call', nil
-    elsif card1_num == '9'
-      return 'call', nil
-    elsif card1_num == 'T'
-      return 'call', nil
-    elsif card1_num == 'J'
-      return 'call', nil
-    elsif card1_num == 'Q'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
-    elsif card1_num == 'K'
-      return 'raise', (turn_data['stack'].to_i).to_s
-    elsif card1_num == 'A'
-      return 'raise', (turn_data['stack'].to_i).to_s
-    else
-      return 'fold', nil
-    end
-  else
-    return 'fold', nil
-  end
+  return logic(turn_data)
 end
 
 def get_river_action(turn_data)
   community_cards = turn_data['community_cards']
-  card1, card2 = get_hand(turn_data)
-  card1_num = card1.split('')[0]
-  card2_num = card2.split('')[0]
-
-  if turn_data['current_bet'].to_f > turn_data['stack'].to_i * 0.5
-    return 'fold', nil
-  elsif card1_num == card2_num
-    if card1_num == '8'
-      return 'call', nil
-    elsif card1_num == '9'
-      return 'call', nil
-    elsif card1_num == 'T'
-      return 'call', nil
-    elsif card1_num == 'J'
-      return 'call', nil
-    elsif card1_num == 'Q'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
-    elsif card1_num == 'K'
-      return 'raise', (turn_data['stack'].to_i).to_s
-    elsif card1_num == 'A'
-      return 'raise', (turn_data['stack'].to_i).to_s
-    else
-      return 'fold', nil
-    end
-  else
-    return 'fold', nil
-  end
+  return logic(turn_data)
 end
 
 
