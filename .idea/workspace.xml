@@ -8,8 +8,8 @@
     <ignored path="poker.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382052654799" ignored="false" />
-    <file path="/poker_bot.rb" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382059023311" ignored="false" />
-    <file path="/test_outputs.rb" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382057799029" ignored="false" />
+    <file path="/poker_bot.rb" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382059776008" ignored="false" />
+    <file path="/test_outputs.rb" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382059615598" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +32,7 @@
       <file leaf-file-name="poker_bot.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/poker_bot.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="52" selection-start="677" selection-end="677" vertical-scroll-proportion="0.53645116">
+            <state line="134" column="5" selection-start="3712" selection-end="3712" vertical-scroll-proportion="0.5983494">
               <folding />
             </state>
           </provider>
@@ -41,7 +41,7 @@
       <file leaf-file-name="test_outputs.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_outputs.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
+            <state line="9" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -337,14 +337,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test_outputs.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
+        <state line="9" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/poker_bot.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="52" selection-start="677" selection-end="677" vertical-scroll-proportion="0.53645116">
+        <state line="134" column="5" selection-start="3712" selection-end="3712" vertical-scroll-proportion="0.5983494">
           <folding />
         </state>
       </provider>

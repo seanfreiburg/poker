@@ -2,6 +2,8 @@ require 'net/http'
 require 'json'
 require 'open-uri'
 
+
+
 CODE_EM_URI = 'nolimitcodeem.com'
 
 def get_hand(turn_data)
@@ -50,13 +52,13 @@ def get_flop_action(turn_data)
     return 'fold', nil
   elsif card1_num == card2_num
     if card1_num == '8'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
+      return 'call', nil
     elsif card1_num == '9'
-      return 'raise', (turn_data['stack'].to_i * 0.4).to_s
+      return 'call', nil
     elsif card1_num == 'T'
-      return 'raise', (turn_data['stack'].to_i * 0.5).to_s
+      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
     elsif card1_num == 'J'
-      return 'raise', (turn_data['stack'].to_i * 0.7).to_s
+      return 'raise', (turn_data['stack'].to_i * 0.5).to_s
     elsif card1_num == 'Q'
       return 'raise', (turn_data['stack'].to_i ).to_s
     elsif card1_num == 'K'
@@ -64,7 +66,7 @@ def get_flop_action(turn_data)
     elsif card1_num == 'A'
       return 'raise', (turn_data['stack'].to_i).to_s
     else
-      return 'call', nil
+      return 'fold', nil
     end
   else
     return 'fold', nil
@@ -81,13 +83,13 @@ def get_turn_action(turn_data)
     return 'fold', nil
   elsif card1_num == card2_num
     if card1_num == '8'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
+      return 'call', nil
     elsif card1_num == '9'
-      return 'raise', (turn_data['stack'].to_i * 0.4).to_s
+      return 'call', nil
     elsif card1_num == 'T'
-      return 'raise', (turn_data['stack'].to_i * 0.5).to_s
+      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
     elsif card1_num == 'J'
-      return 'raise', (turn_data['stack'].to_i * 0.7).to_s
+      return 'raise', (turn_data['stack'].to_i * 0.5).to_s
     elsif card1_num == 'Q'
       return 'raise', (turn_data['stack'].to_i ).to_s
     elsif card1_num == 'K'
@@ -95,7 +97,7 @@ def get_turn_action(turn_data)
     elsif card1_num == 'A'
       return 'raise', (turn_data['stack'].to_i).to_s
     else
-      return 'call', nil
+      return 'fold', nil
     end
   else
     return 'fold', nil
@@ -112,13 +114,13 @@ def get_river_action(turn_data)
     return 'fold', nil
   elsif card1_num == card2_num
     if card1_num == '8'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
+      return 'call', nil
     elsif card1_num == '9'
-      return 'raise', (turn_data['stack'].to_i * 0.4).to_s
+      return 'call', nil
     elsif card1_num == 'T'
-      return 'raise', (turn_data['stack'].to_i * 0.5).to_s
+      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
     elsif card1_num == 'J'
-      return 'raise', (turn_data['stack'].to_i * 0.7).to_s
+      return 'raise', (turn_data['stack'].to_i * 0.5).to_s
     elsif card1_num == 'Q'
       return 'raise', (turn_data['stack'].to_i ).to_s
     elsif card1_num == 'K'
@@ -126,7 +128,7 @@ def get_river_action(turn_data)
     elsif card1_num == 'A'
       return 'raise', (turn_data['stack'].to_i).to_s
     else
-      return 'call', nil
+      return 'fold', nil
     end
   else
     return 'fold', nil
@@ -161,10 +163,13 @@ def send_action(key, action,amount)
     res = Net::HTTP.post_form(uri, action_name: action)
   end
   puts res.body
+
 end
 
 
 def main(key)
+
+
   loop {
     turn_data = get_game_state(key)
     puts turn_data
