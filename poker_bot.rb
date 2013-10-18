@@ -24,11 +24,11 @@ def get_deal_action(turn_data)
     elsif card1_num == '9'
       return 'call', nil
     elsif card1_num == 'T'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
+      return 'call', nil
     elsif card1_num == 'J'
-      return 'raise', (turn_data['stack'].to_i * 0.5).to_s
+      return 'call', nil
     elsif card1_num == 'Q'
-      return 'raise', (turn_data['stack'].to_i ).to_s
+      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
     elsif card1_num == 'K'
       return 'raise', (turn_data['stack'].to_i).to_s
     elsif card1_num == 'A'
@@ -56,11 +56,11 @@ def get_flop_action(turn_data)
     elsif card1_num == '9'
       return 'call', nil
     elsif card1_num == 'T'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
+      return 'call', nil
     elsif card1_num == 'J'
-      return 'raise', (turn_data['stack'].to_i * 0.5).to_s
+      return 'call', nil
     elsif card1_num == 'Q'
-      return 'raise', (turn_data['stack'].to_i ).to_s
+      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
     elsif card1_num == 'K'
       return 'raise', (turn_data['stack'].to_i).to_s
     elsif card1_num == 'A'
@@ -87,11 +87,11 @@ def get_turn_action(turn_data)
     elsif card1_num == '9'
       return 'call', nil
     elsif card1_num == 'T'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
+      return 'call', nil
     elsif card1_num == 'J'
-      return 'raise', (turn_data['stack'].to_i * 0.5).to_s
+      return 'call', nil
     elsif card1_num == 'Q'
-      return 'raise', (turn_data['stack'].to_i ).to_s
+      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
     elsif card1_num == 'K'
       return 'raise', (turn_data['stack'].to_i).to_s
     elsif card1_num == 'A'
@@ -118,11 +118,11 @@ def get_river_action(turn_data)
     elsif card1_num == '9'
       return 'call', nil
     elsif card1_num == 'T'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
+      return 'call', nil
     elsif card1_num == 'J'
-      return 'raise', (turn_data['stack'].to_i * 0.5).to_s
+      return 'call', nil
     elsif card1_num == 'Q'
-      return 'raise', (turn_data['stack'].to_i ).to_s
+      return 'raise', (turn_data['stack'].to_i * 0.3).to_s
     elsif card1_num == 'K'
       return 'raise', (turn_data['stack'].to_i).to_s
     elsif card1_num == 'A'

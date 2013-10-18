@@ -8,7 +8,7 @@
     <ignored path="poker.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382052654799" ignored="false" />
-    <file path="/poker_bot.rb" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382059776008" ignored="false" />
+    <file path="/poker_bot.rb" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382060145548" ignored="false" />
     <file path="/test_outputs.rb" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382059615598" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +32,7 @@
       <file leaf-file-name="poker_bot.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/poker_bot.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="5" selection-start="3712" selection-end="3712" vertical-scroll-proportion="0.5983494">
+            <state line="134" column="5" selection-start="3460" selection-end="3460" vertical-scroll-proportion="2.7647867">
               <folding />
             </state>
           </provider>
@@ -41,7 +41,7 @@
       <file leaf-file-name="test_outputs.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_outputs.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
+            <state line="16" column="20" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -65,8 +65,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test_outputs.rb" />
         <option value="$PROJECT_DIR$/poker_bot.rb" />
+        <option value="$PROJECT_DIR$/test_outputs.rb" />
       </list>
     </option>
   </component>
@@ -337,14 +337,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test_outputs.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
+        <state line="16" column="20" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/poker_bot.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="5" selection-start="3712" selection-end="3712" vertical-scroll-proportion="0.5983494">
+        <state line="134" column="5" selection-start="3460" selection-end="3460" vertical-scroll-proportion="2.7647867">
           <folding />
         </state>
       </provider>
