@@ -2,6 +2,7 @@ require 'net/http'
 require 'json'
 require 'open-uri'
 
+# This code is a horrible mess. This is what a time crunch does to code
 
 CODE_EM_URI = 'nolimitcodeem.com'
 
@@ -9,9 +10,7 @@ def logic(turn_data)
   card1, card2 = get_hand(turn_data)
   card1_num = card1.split('')[0]
   card2_num = card2.split('')[0]
-  if turn_data['current_bet'].to_f > (turn_data['stack'].to_i * 0.5 )
-    return 'fold', nil
-  elsif card1_num == card2_num
+  if card1_num == card2_num
     if card1_num == '8'
       return 'call', nil
     elsif card1_num == '9'
@@ -21,11 +20,11 @@ def logic(turn_data)
     elsif card1_num == 'J'
       return 'call', nil
     elsif card1_num == 'Q'
-      return 'raise', (turn_data['stack'].to_i * 0.3).to_i.to_s
+      return 'raise', (turn_data['stack'].to_i * 0.2).to_i.to_s
     elsif card1_num == 'K'
-      return 'raise', (turn_data['stack'].to_i * 0.4).to_i.to_s
+      return 'raise', (turn_data['stack'].to_i * 0.3).to_i.to_s
     elsif card1_num == 'A'
-      return 'raise', (turn_data['stack'].to_i * 0.9).to_i.to_s
+      return 'raise', (turn_data['stack'].to_i * 0.5).to_i.to_s
     else
       return 'fold', nil
     end
@@ -96,21 +95,30 @@ def send_action(key, action, amount)
   else
     res = Net::HTTP.post_form(uri, action_name: action)
   end
+  puts 'Response'.red
   puts res.body
+  puts 'End Response \n'.red
 
 end
 
 
 def main(key)
 
-
+  i =0
   loop {
     turn_data = get_game_state(key)
-    puts turn_data
+    puts 'Get Request '.green + i.to_s.green
+    #puts turn_data
+    puts ' End Get Request \n'.green
     if turn_data['your_turn']
       action, amount = get_action(turn_data)
+      puts puts 'Action'.pink
+      puts action.yellow
+      puts amount.yellow if amount
+      puts 'End Action \n'.pink
       send_action(key, action, amount)
     end
     sleep 1
+    i +=1
   }
 end

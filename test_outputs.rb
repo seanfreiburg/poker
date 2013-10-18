@@ -1,12 +1,36 @@
 require 'net/http'
 require_relative 'poker_bot'
 
+
+class String
+  # colorization
+  def colorize(color_code)
+    "\e[#{color_code}m#{self}\e[0m"
+  end
+
+  def red
+    colorize(31)
+  end
+
+  def green
+    colorize(32)
+  end
+
+  def yellow
+    colorize(33)
+  end
+
+  def pink
+    colorize(35)
+  end
+end
+
 deal_key =  '/sandbox/players/deal-phase-key'
 flop_key = '/sandbox/players/flop-phase-key'
 turn_key =   '/sandbox/players/turn-phase-key'
 river_key =   '/sandbox/players/river-phase-key'
 
-real_key = '/api/players/1f828c47-3358-41bf-8388-f85b077d4797'
+real_key = '/api/players/3f511dfc-55f5-4a44-af1b-5f5951ec18b7'
 
 
 main(real_key)

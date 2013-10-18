@@ -4,13 +4,12 @@
     <list default="true" id="a57d6294-9134-4582-9530-a127630a3d43" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poker_bot.rb" afterPath="$PROJECT_DIR$/poker_bot.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_outputs.rb" afterPath="$PROJECT_DIR$/test_outputs.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="poker.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382052654799" ignored="false" />
-    <file path="/poker_bot.rb" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382063134953" ignored="false" />
-    <file path="/test_outputs.rb" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382063211700" ignored="false" />
+    <file path="/poker_bot.rb" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382065473145" ignored="false" />
+    <file path="/test_outputs.rb" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382064604271" ignored="false" />
     <file path="/blah" changelist="a57d6294-9134-4582-9530-a127630a3d43" time="1382062423693" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +33,7 @@
       <file leaf-file-name="poker_bot.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/poker_bot.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="32" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.7634113">
+            <state line="110" column="5" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.607978">
               <folding />
             </state>
           </provider>
@@ -52,7 +51,7 @@
       <file leaf-file-name="test_outputs.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_outputs.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="1" selection-start="1094" selection-end="1094" vertical-scroll-proportion="0.0">
+            <state line="32" column="61" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -344,7 +343,9 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/blah">
@@ -356,14 +357,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_outputs.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="1" selection-start="1094" selection-end="1094" vertical-scroll-proportion="0.0">
+        <state line="32" column="61" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/poker_bot.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="32" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.7634113">
+        <state line="110" column="5" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.607978">
           <folding />
         </state>
       </provider>
